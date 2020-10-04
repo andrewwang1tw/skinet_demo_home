@@ -108,4 +108,6 @@ git init
 create .gitignore file
 
 git add .
+git commit -m "Initial Commit"
+
 
