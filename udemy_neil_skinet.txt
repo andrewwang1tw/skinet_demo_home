@@ -133,7 +133,10 @@ dotnet ef migrations add InitialCreate -p Infrastructure -s API -o Data/Migratio
 == 3-28. Adding Seed data ==========================================================
 == 3-29. Adding the code to get the product brand and type =========================
 == 3-30. Eager loading of navigation properties ====================================
-
+git add .
+git commit -m "End of Section 3"
+git branch -M main
+git push -u origin main
 
 == Section 4 API Generic Repository =========================================================================================================
 
