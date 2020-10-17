@@ -10,15 +10,16 @@ Material Icon Theme
 NuGet Package Manager
 SQLite
 
-== Section 2 API Basics ===========================================================
-== 2-4. Source code and assets ====================================================
+=================================================================================================================================================
+== Section 2 API Basics 
+=================================================================================================================================================
 
+== 2-4. Source code and assets ====================================================
 Source code, https://github.com/trycatchlearn/skinet
 Student Assets
 
 == 2-5. Intoduction
 == 2-6. Create the Web API project ================================================
-
 dotnet new sln
 dotnet new webapi -o API
 dotnet sln add API/
@@ -40,7 +41,6 @@ dotnet dev-certs https -t
 == 2-9. Adding our first API controller ==========================================
 == 2-10. Adding a C# Entity class ================================================
 == 2-11. Setting up Entity Framework =============================================
-
 Dotnet --info
     Host
         Version: 3.1.6
@@ -56,7 +56,6 @@ Ctrl+ Shift + P => NuGet Package manager: Add Package
 
 == 2-12. Adding a connection string =============================================
 == 2-13. Adding an Entity Framework migration ===================================
-
 dotnet --info
     .NetCore SDKs Installed:
         3.1.302 
@@ -70,7 +69,6 @@ dotnet ef migrations add initialCreate -o Data/Migrations
 dotnet ed migrations remove
 
 == 2-14. Updating the database ==================================================
-
 dotnet ef database -h
 dotnet ef database update
 dotnet ef database drop
@@ -78,9 +76,7 @@ dotnet ef database drop
 == 2-15. Reading the data from the database in the API ===========================
 == 2-16. Postman Collections =====================================================
 == 2-17. Creating the additional projects. Refactoring ===========================
-
 dotnet new -h
-
 dotnet new classlib -o Core
 dotnet new classlib -o Infrastructure
 
@@ -101,7 +97,6 @@ Refactoring, copy below from API project into Infrastructure project file
 dotnet build
 
 == 2-18. Source control, Git and github =============================================
-
 git status
 git init
 
@@ -110,4 +105,38 @@ create .gitignore file
 git add .
 git commit -m "Initial Commit"
 
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/andrewwang1tw/skinet_demo_home.git
+git push -u origin main
 
+== 2-19. Summary of section 2 ======================================================
+
+=============================================================================================================================================
+== Section 3 API Architecture 
+=============================================================================================================================================
+== 3-20. Introduction ==============================================================
+== 3-21. The Repository Pattern ====================================================
+== 3-22. Adding a Repository and Interface =========================================
+== 3-23. Adding a Repository Methods ===============================================
+== 3-24. Extending the product entity and creating related entities=================
+== 3-25. Creating a new migration for the entities =================================
+
+dotnet ef database drop -p Infrastructure -s API
+dotnet ef migrations remove -p Infrastructure -s API
+dotnet ef migrations add InitialCreate -p Infrastructure -s API -o Data/Migrations
+
+== 3-26. Configuring the migrations ================================================
+== 3-27. Apply the migrations and creating the Database app startup ================
+== 3-28. Adding Seed data ==========================================================
+== 3-29. Adding the code to get the product brand and type =========================
+== 3-30. Eager loading of navigation properties ====================================
+
+
+== Section 4 API Generic Repository =========================================================================================================
+
+== Section 5 API Error Handling =============================================================================================================
+
+== Section 6 API Paging, Filtering, Sorting & Searching =====================================================================================
